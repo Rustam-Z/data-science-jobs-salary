@@ -16,12 +16,12 @@ app = Flask(__name__)
 
 @app.route('/predict', methods=['GET'])
 def predict():
-    # # stub input features
-    # request_json = request.get_json()
-    # x = request_json['input']
-    # x_in = np.array(x).reshape(1,-1)
+    # stub input features
+    request_json = request.get_json()
+    x = request_json['input']
+    x_in = np.array(x).reshape(1,-1)
 
-    x_in = np.array(data_in).reshape(1,-1)
+    # x_in = np.array(data_in).reshape(1,-1)
 
     # load model
     model = load_models()

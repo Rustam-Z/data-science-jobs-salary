@@ -4,3 +4,13 @@ conda create -n new_env python=3.7
 
 python wsgi.py
 curl -X GET http://127.0.0.1:5000/predict
+
+
+NEW WAY:
+python wsgi.py
+python request.py
+
+
+How it works?
+- So, we have app.py where the predict function is located
+  then in request.py we send the data (features) to our server (local in wsgi.py), then predict() returns the prediction
